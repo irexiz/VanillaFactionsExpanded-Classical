@@ -72,6 +72,18 @@
 </KCSG.SymbolDef>
 
 <KCSG.SymbolDef>
+  <defName>VFEC_FlagstoneConcrete</defName>
+  <isTerrain>true</isTerrain>
+  <terrain>VFEC_FlagstoneConcrete</terrain>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEC_TileConcrete</defName>
+  <isTerrain>true</isTerrain>
+  <terrain>VFEC_TileConcrete</terrain>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
   <defName>VFEC_TheatreStage_VFEC_BlocksConcrete_North</defName>
   <thing>VFEC_TheatreStage</thing>
   <stuff>VFEC_BlocksConcrete</stuff>
