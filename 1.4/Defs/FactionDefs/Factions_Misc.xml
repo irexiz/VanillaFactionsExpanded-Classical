@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Tribal -->
-
   <FactionDef ParentName="FactionBase" Name="VFEC_RepublicBase" Abstract="True">
     <pawnSingular>plebeian</pawnSingular>
     <pawnsPlural>plebeians</pawnsPlural>
