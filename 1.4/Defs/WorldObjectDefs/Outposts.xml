@@ -23,7 +23,6 @@
         <ChooseDesc>Choose which plant this outpost should plant</ChooseDesc>
       </li>
       <li Class="KCSG.CustomGenOption">
-        <useStructureLayout>True</useStructureLayout>
         <chooseFromlayouts>
           <li>Outpost_Struct_Farming</li>
         </chooseFromlayouts>
@@ -49,7 +48,6 @@
         <Event>VOE_JoinHuntingOutpost</Event>
       </li>
       <li Class="KCSG.CustomGenOption">
-        <useStructureLayout>True</useStructureLayout>
         <chooseFromlayouts>
           <li>Outpost_Struct_Hunting</li>
         </chooseFromlayouts>
@@ -81,7 +79,6 @@
         <Event>VOE_JoinLoggingOutpost</Event>
       </li>
       <li Class="KCSG.CustomGenOption">
-        <useStructureLayout>True</useStructureLayout>
         <chooseFromlayouts>
           <li>Outpost_Struct_Logging</li>
         </chooseFromlayouts>
@@ -113,7 +110,6 @@
         </Resources>
       </li>
       <li Class="KCSG.CustomGenOption">
-        <useStructureLayout>True</useStructureLayout>
         <chooseFromlayouts>
           <li>Outpost_Struct_Mining</li>
         </chooseFromlayouts>
