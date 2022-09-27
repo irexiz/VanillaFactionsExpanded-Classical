@@ -91,8 +91,9 @@
       </li>
       
       <!-- Weapons-->
-      <li Class="StockGenerator_WeaponsRanged">
+      <li Class="StockGenerator_MarketValue">
         <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+		<tradeTag>WeaponRanged</tradeTag>
         <countRange>2~4</countRange>
       </li>
       <li Class="StockGenerator_Category">
@@ -103,8 +104,9 @@
       </li>
       
       <!-- Apparel-->
-      <li Class="StockGenerator_Clothes">
+      <li Class="StockGenerator_MarketValue">
         <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+		<tradeTag>BasicClothing</tradeTag>
         <countRange>4~12</countRange>
       </li>
       
