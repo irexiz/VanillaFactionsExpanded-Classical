@@ -48,12 +48,6 @@
 </KCSG.SymbolDef>
 
 <KCSG.SymbolDef>
-  <defName>VFEC_FlagstoneConcrete</defName>
-  <isTerrain>true</isTerrain>
-  <terrain>VFEC_FlagstoneConcrete</terrain>
-</KCSG.SymbolDef>
-
-<KCSG.SymbolDef>
   <defName>VFEC_Plant_Poppy</defName>
   <thing>VFEC_Plant_Poppy</thing>
 </KCSG.SymbolDef>
@@ -63,12 +57,6 @@
   <thing>VFEC_WoodFiredCrematorium</thing>
   <stuff>BlocksGranite</stuff>
   <rotation>East</rotation>
-</KCSG.SymbolDef>
-
-<KCSG.SymbolDef>
-  <defName>VFEC_MosaicsSlate</defName>
-  <isTerrain>true</isTerrain>
-  <terrain>VFEC_MosaicsSlate</terrain>
 </KCSG.SymbolDef>
 
 <KCSG.SymbolDef>
@@ -88,12 +76,6 @@
   <defName>VFEC_Beacon_North</defName>
   <thing>VFEC_Beacon</thing>
   <rotation>North</rotation>
-</KCSG.SymbolDef>
-
-<KCSG.SymbolDef>
-  <defName>VFEC_TileConcrete</defName>
-  <isTerrain>true</isTerrain>
-  <terrain>VFEC_TileConcrete</terrain>
 </KCSG.SymbolDef>
 
 <KCSG.SymbolDef>
