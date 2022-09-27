@@ -188,8 +188,7 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
-        <li Class="KCSG.FactionSettlement">
-          <useStructureLayout>True</useStructureLayout>
+        <li Class="KCSG.CustomGenOption">
           <chooseFromlayouts>
             <li>VFEC_ClassicalSettlement1</li>
           </chooseFromlayouts>
