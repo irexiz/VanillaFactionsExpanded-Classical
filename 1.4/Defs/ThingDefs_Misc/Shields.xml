@@ -86,7 +86,6 @@
             <MoveSpeed>-0.4</MoveSpeed>
         </equippedStatOffsets>
         <comps>
-            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
             <li Class="VFECore.CompProperties_Shield">
                 <shieldTags>
                     <li>Classical</li>
