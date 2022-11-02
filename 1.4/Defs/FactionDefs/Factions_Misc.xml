@@ -35,6 +35,13 @@
       <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
       <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
     </structureMemeWeights>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.05</Impid>
+      </xenotypeChances>
+    </xenotypeSet>
     <backstoryFilters>
       <li>
         <categories>
