@@ -8,6 +8,7 @@
 		<statBases>
 			<WorkToBuild>8000</WorkToBuild>
 			<Beauty>5</Beauty>
+			<MarketValue>36</MarketValue>
 		</statBases>
 		<designatorDropdown>VFEC_Mosaics</designatorDropdown>
 		<researchPrerequisites>
