@@ -1,96 +1,50 @@
 ﻿using System.Collections.Generic;
-using System.Reflection.Emit;
 using HarmonyLib;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
-namespace VFEC.Comps
+namespace VFEC.Comps;
+
+public class CompTent : ThingComp
 {
-    [StaticConstructorOnStartup]
-    public class CompTent : ThingComp
+    public override void Notify_AddBedThoughts(Pawn pawn)
     {
-        public static bool SkipRendering;
-        private static bool donePatches;
+        base.Notify_AddBedThoughts(pawn);
+        pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptOutside);
+        pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptOnGround);
+        pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptInCold);
+        pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptInHeat);
+    }
+}
 
-        private static HashSet<ThingDef> tents = new();
+public class CompProperties_Tent : CompProperties
+{
+    private static bool donePatches;
+    private static readonly HashSet<ThingDef> tents = new();
 
-        public static IEnumerable<CodeInstruction> RenderPawnAt_Transpile(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
+    public CompProperties_Tent() => compClass = typeof(CompTent);
+
+    public static bool HideUnderTent(ref bool __result, Pawn pawn)
+    {
+        var bed = pawn.CurrentBed();
+        if (bed != null && tents.Contains(bed.def))
         {
-            var labelNext = false;
-            var label = generator.DefineLabel();
-            foreach (var instruction in instructions)
-            {
-                if (labelNext)
-                {
-                    yield return instruction.WithLabels(label);
-                    labelNext = false;
-                }
-                else yield return instruction;
-
-                if (instruction.opcode == OpCodes.Stloc_S && instruction.operand is LocalBuilder {LocalIndex: 8})
-                {
-                    labelNext = true;
-                    yield return CodeInstruction.LoadField(typeof(CompTent), nameof(SkipRendering));
-                    yield return new CodeInstruction(OpCodes.Brfalse, label);
-                    yield return new CodeInstruction(OpCodes.Ldc_I4_0);
-                    yield return CodeInstruction.StoreField(typeof(CompTent), nameof(SkipRendering));
-                    yield return new CodeInstruction(OpCodes.Ret);
-                }
-            }
+            __result = true;
+            return false;
         }
 
-        public static IEnumerable<CodeInstruction> GetBodyPos_Transpile(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
-        {
-            var labelNext = false;
-            var doneInsert = false;
-            var label = generator.DefineLabel();
-            foreach (var instruction in instructions)
-            {
-                if (labelNext)
-                {
-                    yield return instruction.WithLabels(label);
-                    labelNext = false;
-                }
-                else yield return instruction;
+        return true;
+    }
 
-                if (!doneInsert && instruction.opcode == OpCodes.Stind_I1)
-                {
-                    labelNext = true;
-                    doneInsert = true;
-                    yield return CodeInstruction.LoadField(typeof(CompTent), nameof(tents));
-                    yield return new CodeInstruction(OpCodes.Ldloc_1);
-                    yield return CodeInstruction.LoadField(typeof(Thing), nameof(Thing.def));
-                    yield return CodeInstruction.Call(typeof(HashSet<ThingDef>), nameof(HashSet<ThingDef>.Contains));
-                    yield return new CodeInstruction(OpCodes.Brfalse, label);
-                    yield return new CodeInstruction(OpCodes.Ldc_I4_1);
-                    yield return CodeInstruction.StoreField(typeof(CompTent), nameof(SkipRendering));
-                    yield return CodeInstruction.Call(typeof(Vector3), "get_zero");
-                    yield return new CodeInstruction(OpCodes.Ret);
-                }
-            }
-        }
-
-        public override void Notify_AddBedThoughts(Pawn pawn)
+    public override void PostLoadSpecial(ThingDef parent)
+    {
+        base.PostLoadSpecial(parent);
+        tents.Add(parent);
+        if (!donePatches)
         {
-            base.Notify_AddBedThoughts(pawn);
-            pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptOutside);
-            pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptOnGround);
-            pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptInCold);
-            pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptInHeat);
-        }
-
-        public override void PostPostMake()
-        {
-            base.PostPostMake();
-            if (!tents.Contains(parent.def)) tents.Add(parent.def);
-            if (!donePatches)
-            {
-                ClassicMod.Harm.Patch(AccessTools.Method(typeof(PawnRenderer), nameof(PawnRenderer.RenderPawnAt)),
-                    transpiler: new HarmonyMethod(GetType(), nameof(RenderPawnAt_Transpile)));
-                ClassicMod.Harm.Patch(AccessTools.Method(typeof(PawnRenderer), "GetBodyPos"), transpiler: new HarmonyMethod(GetType(), nameof(GetBodyPos_Transpile)));
-                donePatches = true;
-            }
+            ClassicMod.Harm.Patch(AccessTools.Method(typeof(InvisibilityUtility), nameof(InvisibilityUtility.IsHiddenFromPlayer)),
+                new(GetType(), nameof(HideUnderTent)));
+            donePatches = true;
         }
     }
 }

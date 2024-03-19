@@ -50,7 +50,7 @@
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
       </li>
-      <li><compClass>VFEC.Comps.CompTent</compClass></li>
+      <li Class="VFEC.Comps.CompProperties_Tent" />
     </comps>
     <drawGUIOverlay>true</drawGUIOverlay>
     <canOverlapZones>false</canOverlapZones>
