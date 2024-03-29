@@ -12,6 +12,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->bulwarks of the legion</li>
+    <li>subject_story->reinvigorated the tradition of heavy shield crafting, providing unmatched protection to those who hold the line</li>
+    <li>subject_gerund->forging the scuta shields, the steadfast guardians of the legionnaires</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_LegionaryArmaments</defName>
@@ -25,6 +32,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->arsenal of the ancients</li>
+    <li>subject_story->mastered the fabrication of javelins, spathas, and daggers, ensuring the legion's versatility and readiness in battle</li>
+    <li>subject_gerund->equipping the legions with a diverse armory for conquest and defense</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_LegionnaireArmor</defName>
@@ -38,6 +52,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->the iron skin</li>
+    <li>subject_story->crafted heavy armor that turns warriors into indomitable forces on the battlefield, capable of withstanding the fiercest strikes</li>
+    <li>subject_gerund->donning the legionnaires in armor that weaves invincibility with the threads of war</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_CenturionArmor</defName>
@@ -51,6 +72,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->mantle of command</li>
+    <li>subject_story->smithed suits of centurion armor, imbuing leaders with both protection and a distinguished presence</li>
+    <li>subject_gerund->clothing the ranks of leadership in armor befitting their valor and virtue</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_Scorpion</defName>
@@ -64,6 +92,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->sting of the legion</li>
+    <li>subject_story->engineered scorpions, merging the precision of a crossbow with the destructive force of field artillery</li>
+    <li>subject_gerund->unleashing the lethal precision of ancient war machines upon the modern battlefield</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_Beacons</defName>
@@ -77,5 +112,12 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->pyres of summoning</li>
+    <li>subject_story->constructed large wooden pyres, a signal to the skies that calls forth allies to the battlefield</li>
+    <li>subject_gerund->binding the fates of allies with flames that guide them to the fray</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 </Defs>

@@ -12,6 +12,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->the fabric of society</li>
+    <li>subject_story->reclaimed the elegance and simplicity of the toga, the symbol of citizenship and refined taste</li>
+    <li>subject_gerund->draping the republic in the dignity and grace of its ancestors</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_TemperatureControl</defName>
@@ -25,6 +32,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->masters of elements</li>
+    <li>subject_story->harnessed natural methods to defy the whims of weather, creating spaces of comfort through passive coolers and hot stones</li>
+    <li>subject_gerund->cultivating havens of warmth and coolness, in defiance of the external world</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_MeatDrying</defName>
@@ -38,6 +52,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->legacy of preservation</li>
+    <li>subject_story->revived the ancient art of meat drying, securing sustenance and delighting palates with flavors honed by time</li>
+    <li>subject_gerund->extending the bounty of the hunt through the wisdom of the ancients</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_Mosaics</defName>
@@ -51,6 +72,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->mosaic of civilization</li>
+    <li>subject_story->crafted stone mosaics that capture the essence of beauty and narrative through color and form</li>
+    <li>subject_gerund->embedding the story of a people in the very stones that pave their path</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_Thermaebath</defName>
@@ -64,6 +92,13 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->sanctuaries of steam</li>
+    <li>subject_story->constructed thermaebaths, communal havens of relaxation and warmth powered by the earth's breath</li>
+    <li>subject_gerund->fostering communal well-being and intimacy in the embrace of nature's warmth</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 	<ResearchProjectDef>
 		<defName>VFEC_DramaAndComedy</defName>
@@ -77,5 +112,12 @@
         <tags>
             <li>ClassicalStart</li>
         </tags>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->the stage of life</li>
+    <li>subject_story->revived the timeless arts of drama and comedy, enriching the soul of the republic through performance and play</li>
+    <li>subject_gerund->mirroring the human condition, from tragedy to farce, on the communal stage</li>
+  </rulesStrings>
+</generalRules>
 	</ResearchProjectDef>
 </Defs>
