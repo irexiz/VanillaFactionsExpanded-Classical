@@ -8,6 +8,7 @@
     <li>1.5</li>
   </supportedVersions>
   <packageId>OskarPotocki.VFE.Classical</packageId>
+  	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
   <description>
 Unite the broken Republics against the common enemy. Stop the senators from squabbling and plotting against each other by completing a chain of missions to gain their favor. 
 Each senator on your side will provide you with more political power in the senate, as well as new technologies, regular tributes and a helping hand when you need it the most. 
