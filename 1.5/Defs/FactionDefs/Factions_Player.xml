@@ -30,7 +30,7 @@
         </categories>
       </li>
     </backstoryFilters>
-    <factionIconPath>World/WorldObjects/Expanding/CentralRepublic</factionIconPath>
+    <factionIconPath>World/WorldObjects/Expanding/NewEmpire</factionIconPath>
     <settlementTexturePath>World/WorldObjects/RepublicSettlement</settlementTexturePath>
     <forageabilityFactor>1.7</forageabilityFactor>
     <startingResearchTags>
